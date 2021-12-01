@@ -1,6 +1,6 @@
 # Uni Localization demo for Vue.js 2.x
 
-Check out demo [here](https://uiwebkit.github.io/vue-loco-2.x/)
+Check out demo [here](https://uiwebkit.github.io/vue-loco-2x/)
 
 Check out our docs [here](https://uiwebkit.com/wgt/loc/1)
 
@@ -68,4 +68,4 @@ Vue.config.ignoredElements = [/uni-\w*/];
 <uni-translate bind-start="${" bind-end="}"><a href="https://your_domain/${localized}">link</a></uni-translate>
 ```
 
-### See and modify ./public/lang-menu.json and translation files into ./public/i18n/ folder
+#### open and modify ./public/lang-menu.json and translation files into ./public/i18n/ folder
