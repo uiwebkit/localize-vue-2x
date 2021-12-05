@@ -3,18 +3,17 @@
     <!-- Remove if language routing is not required -->
     <uni-router shadow></uni-router>
 
+    <uni-translate bind-start="${" bind-end="}">Choose the option that suits you best:</uni-translate>
+
     <div>
-      <uni-lang-menu-shadow mini round routing type="local" list="lang-menu.json"></uni-lang-menu-shadow>
+      <uni-lang-menu-shadow mini round routing type="local" list="lang-menu.json"></uni-lang-menu-shadow>(Web Component)
       | <span><UniLangMenuCustom/>(Next Gen custom)</span>
     </div>
 
     <img alt="Vue logo" src="./assets/logo.png">
 
     <uni-translate bind-start="${" bind-end="}">
-      <!-- Uncomment for custom language menu and remove previous uni-translate -->
-      <!--<uni-translate path="loc.custom.translate" bind-start="${" bind-end="}">-->
       <HelloWorld msg="Welcome to Your Vue.js App"/>
-      <!--</uni-translate>-->
     </uni-translate>
   </div>
 </template>
