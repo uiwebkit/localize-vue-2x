@@ -15,7 +15,7 @@ Vue.config.ignoredElements = [/uni-\w*/];
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/flag@0.1.1/dist/flag/flag.esm.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/mat@2.0.0-2/dist/mat.esm.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/udk@2.0.0-5/dist/udk.esm.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/udk@2.0.0-6/dist/udk.esm.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/loc@2.0.0-1/dist/loc/loc.esm.js"></script>
 ```
 
