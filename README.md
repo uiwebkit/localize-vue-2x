@@ -2,7 +2,7 @@
 
 Check out demo [here](https://uiwebkit.github.io/localize-vue-2x/)
 
-Check out our docs [here](https://uiwebkit.com/wgt/loc/1)
+Check out our docs [here](https://uiwebkit.com/wgt/loc/2)
 
 ### Add to main.js
 
