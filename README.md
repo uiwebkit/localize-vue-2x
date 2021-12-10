@@ -14,18 +14,9 @@ Vue.config.ignoredElements = [/uni-\w*/];
 
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/flag@0.1.1/dist/flag/flag.esm.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/udk@2.0.0-11/dist/udk.esm.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/mat@2.0.0-2/dist/mat.esm.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/udk@2.0.0-9/dist/udk.esm.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/loc@2.0.0-1/dist/loc/loc.esm.js"></script>
-```
-
-#### to support Internet Explorer
-
-```html
-<script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/icn@latest/dist/icn/icn.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/mat@latest/dist/mat.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/udk@latest/dist/udk.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/loc@latest/dist/loc/loc.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/loc@2.0.0-2/dist/loc/loc.esm.js"></script>
 ```
 
 #### Place Uni Language Menu into the header of your web app. Specify the path to the language list JSON file (ex. lang-menu.json) or backend API endpoint
@@ -41,22 +32,24 @@ Vue.config.ignoredElements = [/uni-\w*/];
 <uni-translate><ContentComponent/></uni-translate>
 ```
 
-#### or wrap your text content with Uni Translate locally (for the better performance)
+#### or wrap your text content with Uni Translate locally (for better performance)
 
 ```html
 <uni-translate>localized content</uni-translate>
 ```
 
-#### override default bindings `{{` and `}}` for partial translation
+#### localize partially
 
 ```html
-<uni-translate bind-start="${" bind-end="}">text and ${partially localized}</uni-translate>
+<uni-translate>text and (( partially localized ))</uni-translate>
 ```
 
-#### localize even attributes
+#### localize attributes
 
 ```html
-<uni-translate bind-start="${" bind-end="}"><a href="https://your_domain/${localized}">link</a></uni-translate>
+<uni-translate>
+  <a href="https://your_domain/(( localized ))">link</a>
+</uni-translate>
 ```
 
 #### open and modify ./public/lang-menu.json and translation files into ./public/i18n/ folder

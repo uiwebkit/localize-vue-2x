@@ -5,7 +5,7 @@
     <p>
       <span>For a guide and recipes on how to configure / customize this project</span>,<br>
       <span>check out the</span>
-      <a href="https://cli.vuejs.org/${cliLang}" target="_blank" rel="noopener"> vue-cli <span>documentation</span></a>.
+      <a href="https://cli.vuejs.org/(( cliLang ))" target="_blank" rel="noopener"> vue-cli <span>documentation</span></a>.
     </p>
 
     <h3>Installed CLI Plugins</h3>

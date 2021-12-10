@@ -1,20 +1,20 @@
 <template>
   <span>
-    <uni-store-set type="local" mode="init" path="loc.active"
-                   state='{"lang": "en", "flag": "gb", "name": "English", "translation": "i18n/en.json"}'>
+    <uni-store-set mode="init" path="loc.active"
+                   state='{"lang": "en", "flag": "gb", "name": "English", "translation": "i18n/en.json"))'>
     </uni-store-set>
 
     <uni-lang-menu only>
       <uni-menu>
         <uni-button pro>
           <uni-button-icon only>
-            <uni-event-store-get type="local" path="loc.active.flag" selector="uni-flag" prop="name">
+            <uni-event-store-get path="loc.active.flag" selector="uni-flag" prop="name">
               <uni-flag round></uni-flag>
             </uni-event-store-get>
           </uni-button-icon>
 
           <uni-button-label>
-            <uni-event-store-get type="local" path="loc.active.name" selector="uni-render" prop="value">
+            <uni-event-store-get path="loc.active.name" selector="uni-render" prop="value">
               <uni-render text></uni-render>
             </uni-event-store-get>
           </uni-button-label>
@@ -25,24 +25,24 @@
         <uni-menu-surface>
           <uni-list-wrap pro>
             <ul>
-              <uni-load-repeat strict url="lang-menu.json" bind-start="${" bind-end="}">
+              <uni-load-repeat strict url="lang-menu.json" bind-start="((" bind-end="))">
                 <div uni-render hidden>
-                  <uni-router-link params="lang=${ lang }">
-                    <uni-event-store-get type="local" path="loc.active.lang" equal="${ lang }" prop="selected">
+                  <uni-router-link params="lang=(( lang ))">
+                    <uni-event-store-get path="loc.active.lang" equal="(( lang ))" prop="selected">
                       <uni-list-item>
                         <uni-list-item-graphic only>
-                          <uni-modify action="unbind" state="${ flag }" prop="name" bind-start="${" bind-end="}">
+                          <uni-modify action="unbind" state="(( flag ))" prop="name" bind-start="((" bind-end="))">
                             <uni-flag round></uni-flag>
                           </uni-modify>
                         </uni-list-item-graphic>
 
-                        <uni-list-item-text>${ name }</uni-list-item-text>
+                        <uni-list-item-text>(( name ))</uni-list-item-text>
                       </uni-list-item>
                     </uni-event-store-get>
                   </uni-router-link>
 
-                  <uni-route params="lang=${ lang }" prop="activate">
-                    <uni-store-set inactive type="local" path="loc.active" state="${ uniself }"></uni-store-set>
+                  <uni-route params="lang=(( lang ))" prop="activate">
+                    <uni-store-set inactive path="loc.active" state="(( uniself ))"></uni-store-set>
                   </uni-route>
                 </div>
               </uni-load-repeat>
@@ -52,7 +52,7 @@
       </uni-menu>
     </uni-lang-menu>
 
-    <uni-event-store-get type="local" path="loc.active.translation" selector="uni-load-store" prop="url">
+    <uni-event-store-get path="loc.active.translation" selector="uni-load-store" prop="url">
       <uni-load-store multi mode="set" path="loc.translate"></uni-load-store>
     </uni-event-store-get>
   </span>
