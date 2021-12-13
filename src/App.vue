@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- Remove if language routing is not required -->
+    <!-- Remove uni-router if language routing is not required -->
     <uni-router shadow/>
 
     <uni-translate>Choose the option that suits you best:</uni-translate>
