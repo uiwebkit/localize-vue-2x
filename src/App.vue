@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <!-- Remove if language routing is not required -->
-    <uni-router shadow></uni-router>
+    <uni-router shadow/>
 
     <uni-translate>Choose the option that suits you best:</uni-translate>
 
     <div>
-      <uni-lang-menu-shadow mini round routing list="lang-menu.json"></uni-lang-menu-shadow>(Web Component)
-      | <span><UniLangMenuCustom/>(Next Gen custom)</span>
+      <uni-lang-menu-shadow mini round routing list="lang-menu.json"/>
+      (Web Component) |
+      <span><UniLangMenuCustom/>(Next Gen custom)</span>
     </div>
 
     <img alt="Vue logo" src="./assets/logo.png">
