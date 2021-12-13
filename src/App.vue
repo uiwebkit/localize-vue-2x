@@ -12,7 +12,7 @@
 
     <img alt="Vue logo" src="./assets/logo.png">
 
-    <uni-translate bind-start="((" bind-end="))">
+    <uni-translate>
       <HelloWorld msg="Welcome to Your Vue.js App"/>
     </uni-translate>
   </div>

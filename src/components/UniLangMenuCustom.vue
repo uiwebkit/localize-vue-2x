@@ -1,8 +1,10 @@
 <template>
   <span>
-    <uni-store-set mode="init" path="loc.active"
-                   state='{"lang": "en", "flag": "gb", "name": "English", "translation": "i18n/en.json"))'>
-    </uni-store-set>
+    <uni-store-set
+        mode="init"
+        path="loc.active"
+        state='{"lang": "en", "flag": "gb", "name": "English", "translation": "i18n/en.json"))'
+    ></uni-store-set>
 
     <uni-lang-menu only>
       <uni-menu>
@@ -25,13 +27,13 @@
         <uni-menu-surface>
           <uni-list-wrap pro>
             <ul>
-              <uni-load-repeat strict url="lang-menu.json" bind-start="((" bind-end="))">
+              <uni-load-repeat strict url="lang-menu.json">
                 <div uni-render hidden>
                   <uni-router-link params="lang=(( lang ))">
                     <uni-event-store-get path="loc.active.lang" equal="(( lang ))" prop="selected">
                       <uni-list-item>
                         <uni-list-item-graphic only>
-                          <uni-modify action="unbind" state="(( flag ))" prop="name" bind-start="((" bind-end="))">
+                          <uni-modify action="unbind" state="(( flag ))" prop="name">
                             <uni-flag round></uni-flag>
                           </uni-modify>
                         </uni-list-item-graphic>
