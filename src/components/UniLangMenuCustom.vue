@@ -3,7 +3,7 @@
     <uni-store-set
         mode="init"
         path="loc.active"
-        state='{"lang": "en", "flag": "gb", "name": "English", "translation": "i18n/en.json"))'
+        state='{"lang": "en", "flag": "gb", "name": "English", "translation": "i18n/en.json"}'
     />
 
     <uni-lang-menu only>
