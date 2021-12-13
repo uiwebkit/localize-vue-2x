@@ -1,4 +1,4 @@
-# Uni Localization demo for Vue.js 2.x
+# Uni Localization example for Vue.js 2.x
 
 Check out demo [here](https://uiwebkit.github.io/localize-vue-2x/)
 
