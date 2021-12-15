@@ -6,7 +6,7 @@
     <uni-translate>Choose the option that suits you best:</uni-translate>
 
     <div>
-      <uni-lang-menu-shadow mini round routing list="lang-menu.json"/>
+      <uni-lang-menu-shadow mini round routing url="lang-menu.json"/>
       (Web Component) |
       <span><UniLangMenuCustom/>(Next Gen custom)</span>
     </div>

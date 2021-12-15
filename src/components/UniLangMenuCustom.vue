@@ -28,7 +28,7 @@
           <uni-list-wrap pro>
             <ul>
               <uni-load-repeat strict url="lang-menu.json">
-                <div uni-render hidden>
+                <uni-render-template hidden>
                   <uni-router-link params="lang=(( lang ))">
                     <uni-event-store-get path="loc.active.lang" equal="(( lang ))" prop="selected">
                       <uni-list-item>
@@ -46,7 +46,7 @@
                   <uni-route params="lang=(( lang ))" prop="activate">
                     <uni-store-set inactive path="loc.active" state="(( uniself ))"/>
                   </uni-route>
-                </div>
+                </uni-render-template>
               </uni-load-repeat>
             </ul>
           </uni-list-wrap>
