@@ -26,6 +26,23 @@ Vue.config.ignoredElements = [/uni-\w*/];
 <uni-lang-menu-shadow mini round routing url="lang-menu.json"></uni-lang-menu-shadow>
 ```
 
+#### Use <uni-render-template> instead of native \<template> (does not work in JSX)
+```html
+<uni-render ...>
+  <uni-render-template hidden>
+    ...
+  </uni-render-template>
+</uni-render>
+
+OR
+
+<uni-load-repeat ...>
+  <uni-render-template hidden>
+    ...
+  </uni-render-template>
+</uni-load-repeat>
+```
+
 #### Wrap your content with Uni Translate globally (for more convenience)
 
 ```html
