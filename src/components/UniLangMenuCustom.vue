@@ -3,7 +3,7 @@
     <uni-store-set
         mode="init"
         path="loc.active"
-        state='{"lang": "en", "flag": "gb", "name": "English", "translation": "i18n/en.json"}'
+        state='{"route": "lang=en", "flag": "gb", "textLabel": "English", "translationUrl": "i18n/en.json"}'
     />
 
     <uni-lang-menu only>
@@ -16,7 +16,7 @@
           </uni-button-icon>
 
           <uni-button-label>
-            <uni-event-store-get path="loc.active.name" selector="uni-render" prop="value">
+            <uni-event-store-get path="loc.active.textLabel" selector="uni-render" prop="value">
               <uni-render text/>
             </uni-event-store-get>
           </uni-button-label>
@@ -28,9 +28,9 @@
           <uni-list-wrap pro>
             <ul>
               <uni-load-repeat strict url="lang-menu.json">
-                <uni-render-template hidden>
-                  <uni-router-link params="lang=(( lang ))">
-                    <uni-event-store-get path="loc.active.lang" equal="(( lang ))" prop="selected">
+                <uni-template hidden>
+                  <uni-router-link params="(( route ))">
+                    <uni-event-store-get path="loc.active.textLabel" equal="(( textLabel ))" prop="selected">
                       <uni-list-item>
                         <uni-list-item-graphic only>
                           <uni-modify action="unbind" state="(( flag ))" prop="name">
@@ -38,15 +38,15 @@
                           </uni-modify>
                         </uni-list-item-graphic>
 
-                        <uni-list-item-text>(( name ))</uni-list-item-text>
+                        <uni-list-item-text>(( textLabel ))</uni-list-item-text>
                       </uni-list-item>
                     </uni-event-store-get>
                   </uni-router-link>
 
-                  <uni-route params="lang=(( lang ))" prop="activate">
+                  <uni-route params="(( route ))" prop="activate">
                     <uni-store-set inactive path="loc.active" state="(( uniself ))"/>
                   </uni-route>
-                </uni-render-template>
+                </uni-template>
               </uni-load-repeat>
             </ul>
           </uni-list-wrap>
@@ -54,7 +54,7 @@
       </uni-menu>
     </uni-lang-menu>
 
-    <uni-event-store-get path="loc.active.translation" selector="uni-load-store" prop="url">
+    <uni-event-store-get path="loc.active.translationUrl" selector="uni-load-store" prop="url">
       <uni-load-store multi mode="set" path="loc.translate"/>
     </uni-event-store-get>
   </span>
